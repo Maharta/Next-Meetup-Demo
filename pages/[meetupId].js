@@ -6,6 +6,9 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 const MeetupDetailPage = ({ meetupData }) => {
+  if (!meetupData.title) {
+    return <p>Loading..</p>;
+  }
   return (
     <Fragment>
       <Head>
@@ -27,7 +30,7 @@ export async function getStaticPaths() {
     };
   });
   return {
-    fallback: false,
+    fallback: true,
     paths: paths,
   };
 }
@@ -46,7 +49,6 @@ export async function getStaticProps(context) {
         description: meetup.description,
       },
     },
-    revalidate: 5,
   };
 }
 
