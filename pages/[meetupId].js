@@ -4,9 +4,12 @@ import { getMeetups } from "../helpers/get-meetups";
 import { ObjectId } from "mongodb";
 import Head from "next/head";
 import { Fragment } from "react";
+import { useRouter } from "next/router";
 
 const MeetupDetailPage = ({ meetupData }) => {
-  if (!meetupData) {
+  const router = useRouter();
+
+  if (router.isFallback) {
     return <p>Loading..</p>;
   }
   return (
