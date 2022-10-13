@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 const MeetupDetailPage = ({ meetupData }) => {
-  if (!meetupData.title) {
+  if (!meetupData) {
     return <p>Loading..</p>;
   }
   return (
