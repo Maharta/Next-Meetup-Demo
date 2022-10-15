@@ -37,3 +37,56 @@
 .header a.active {
   color: white;
 }
+
+@media screen and (max-width: 520px) {
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .header li {
+    margin-left: 2rem;
+  }
+
+  .header a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 521px) and (max-width: 810px) {
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .header li {
+    margin-left: 3rem;
+  }
+
+  .header a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 704px) and (max-width: 810px) {
+  .header {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .header li {
+    margin-left: 3rem;
+  }
+
+  .header a {
+    font-size: 1.3rem;
+  }
+}

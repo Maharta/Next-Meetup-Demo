@@ -44,3 +44,14 @@
 .actions button:active {
   background-color: #ffe2ed;
 }
+
+@media screen and (max-width: 400px) {
+  .image {
+    height: 13rem;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 530px) {
+  .image {
+    height: 15rem;
+  }
+}
