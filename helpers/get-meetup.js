@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 export async function getMeetup(filterOptions = {}, fieldFilterOptions = {}) {
   try {
     const client = await MongoClient.connect(
-      "mongodb+srv://gdcr7:Rq1EPwspPIEoN3Ub@meetupnextjs.vonzt9e.mongodb.net/meetups?retryWrites=true&w=majority"
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@meetupnextjs.vonzt9e.mongodb.net/meetups?retryWrites=true&w=majority`
     );
     const db = client.db();
 
